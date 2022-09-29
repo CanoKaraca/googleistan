@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googleistan TR</title>
+</head>
+
+<body style="display: flex; justify-content: space-between; background-color: #333;">
+    <div>
+        <div style="padding: 8px; border-radius: 12px; background: #fff;">
+            <img height="600" width="300" src="https://www.tccb.gov.tr/assets/resim/genel/receptayyiperdogan-bio.jpg">
+        </div>
+    </div>
+    <div style="display: flex; justify-content: start; flex-direction: column; align-items:center; gap: 32px;">
+        <h1 style="display: flex; gap: 10px; align-items: center; color:rgba(255, 255, 255, 0.767);">Milli Arama moturu Googlistan TR
+
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAbFBMVEXjChf////iAADjABHjAA3jBRTiAAf96On619n97O385Ob+9fb+8vPnQUf2wcPmLjf1rLD73d/5yszqX2TmNz7lGCbwjpLvhorzpqntcXftaW/mJzHpSVDrWWH/+vvkEx/3ur7vfoPzmp/pUFa6+WgqAAACcklEQVRoge1Y27ZjQBClbwjaJRFNIkj+/x8Hc06WIlqn8TBrej+zV3XVrqtlGRgYGBgY/JeghKE3GKY7UmNkhWUep4lzclPRni8Y7URPCcquqWOPkDS5hcgO3ISGjW/PEMQRw1vNRlHzmFMP9OKGtpnNcuczdY9TiTYYzy7NjNF3eZwXZZHHPLFFpu15dHOn1N6zit6SjM4ivmnazu7ehNpte5G/P8AMsarW445OkPrxzOYRxFrkJJtwJ+GW8AFQGkPuNNomvDFQPuG29sjIv8AZzEpXX3NzIOgU787W7VGtZawKAHm57u/6nCmyIwEdTlb/oxa/qkWcMsAdVOtOoTVXeV8HVELDFVoDzVLbiX6jTiUBQLCmKERzILdd3KcZZai+LwYAw8T3VHoaHoqcYH2rPYu0WSRHBegPsYorcZT03+Zhwf2H7d8X0wJdgVdaNfLhtT9WSYQDheifFVxOUDiqz2m97EgC+s8pXMt8itD9OdKA/1o2hxI+Jk8ieaXtQlimoK3IsolioERXntZ1GU8mD2lafEduFSnktrmU/Fu30KsLjJfK6/uAslKM5hsvlOjreyn2ehnFlFNJaYFJlKskEQElQ+KYDen/fF2d7ufgsuhK/cLVWF3durVNwpclpltynaGN427QqyTkes0iCH8diCV9UbPNtQovtLQaNOVCcSQjLzhaFAqjRaE6Whw6FB07zh06iHZ198AR+tDh/9PaInZbW9QWLlzp2v5hVQxmq6L2hYFE8ZR9tyV3bT1PNq3nK4eFerM4Cf54EvHEZfNJxPo55vBjjjk9xmco3p+hyF5nqAEHHtAMDAwMDAz+efwB0E8ihXq+a9gAAAAASUVORK5CYII="
+                width="64" height="64" style="border-radius: 12px;">
+        </h1>
+        <div style="display:flex; flex-direction: column; gap:32px; background: #fff; padding: 12px; border-radius: 7px;">
+            <form id="searchForm" action="submit" style="display: flex; flex-direction:column; gap:12px;">
+                <input style="padding: 8px; color: #333" name="text" type="text" placeholder="Google'da arat!">
+                <button style="color: rgba(255, 255, 255, 0.731); background: rgb(255, 61, 61); font-family: Arial, Helvetica, sans-serif; border: none; padding: 6px; border-radius: 3px; cursor: pointer;" type="submit">Sonuçlara bak</button>
+            </form>
+            <div style="display: flex; justify-content: center;">
+                <a target="_blank" href="https://turkiye.gov.tr/" style=" color: rgb(0, 97, 177); text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Şikayetçi ol</a>
+            </div>
+        </div>
+
+        <img src="http://store.donanimhaber.com/21/72/f3/2172f3523fd5d69322ef2611923b38ae.jpg" width="300" height="250"
+            style="border-radius: 12px;">
+    </div>
+    <div>
+        <div style="padding: 8px; border-radius: 12px; background: #fff;">
+            <img height="600" width="300"
+                src="https://polisdergisi.pa.edu.tr/Upload/Duyuru/cumhurbaskanimiz-sayin-recep-tayyip-erdogan-turk-polis-teskilatie28099nin-175-kurulus-yil-donumunu-kutladi-duyuru9064e4f1-4e78-4ea1-9482-c876dec1ad38.jpg">
+        </div>
+    </div>
+</body>
+
+<script>
+    let form = document.getElementById("searchForm");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(form)
+
+        let userInput = formData.get("text");
+        let url = "https://google.com/search?q="
+        window.location.href = url + userInput;
+    })
+</script>
+
+</html>
